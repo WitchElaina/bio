@@ -19,6 +19,7 @@ addEventListener('wheel', (e) => {
       curNav.value = lastView.value || 'profile';
     }
   } else {
+    if (curNav.value === 'home') return;
     lastView.value = curNav.value;
     curNav.value = 'home';
   }

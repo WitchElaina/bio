@@ -19,7 +19,13 @@ const tipmap = {
 
 <template>
   <div class="home-wrapper">
-    <IconButton label="fas fa-chevron-up" color="var(--color-on-main-card-secondary)"></IconButton>
+    <IconButton
+      label="fas fa-chevron-up"
+      color="var(--color-on-main-card-secondary)"
+      layerColor="rgba(0,0,0,0)"
+      style="cursor: default"
+    >
+    </IconButton>
     <div class="ui-tips">{{ tipmap[tip] }}</div>
     <div class="bio">{{ config.BIO }}</div>
   </div>
