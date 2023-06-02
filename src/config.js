@@ -40,11 +40,17 @@ export default {
       content: 'mail@mszook.art',
       url: 'mailto:mail@mszook.art',
     },
+    // {
+    //   icon: 'fas fa-phone',
+    //   label: 'Phone',
+    //   content: '+44 07419341611',
+    //   url: 'tel:+4407419341611',
+    // },
     {
-      icon: 'fas fa-phone',
-      label: 'Phone',
-      content: '+44 07419341611',
-      url: 'tel:+4407419341611',
+      icon: 'fas fa-message',
+      label: 'Wechat',
+      content: 'msz1013441762',
+      url: '',
     },
   ],
 };
