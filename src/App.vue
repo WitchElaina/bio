@@ -8,15 +8,18 @@ import { useRouter } from 'vue-router';
 const cardExpanded = ref(false);
 const curNav = ref('home');
 const router = useRouter();
+
+const lastView = ref('');
 let mutex = false;
 
 addEventListener('wheel', (e) => {
   if (mutex) return;
   if (e.deltaY > 0) {
     if (curNav.value === 'home') {
-      curNav.value = 'profile';
+      curNav.value = lastView.value || 'profile';
     }
   } else {
+    lastView.value = curNav.value;
     curNav.value = 'home';
   }
 });
@@ -72,7 +75,7 @@ watch(curNav, (curNav) => {
             :enter-active-class="route.meta.transitionEnter"
             :leave-active-class="route.meta.transitionLeave"
           >
-            <component :is="Component" />
+            <component :is="Component" :tip="lastView" />
           </transition>
         </router-view>
       </div>

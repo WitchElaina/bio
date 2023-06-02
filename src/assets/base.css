@@ -2,6 +2,7 @@
   --color-main-card-light: #E4E4E4;
   --color-on-main-card-primary-light: #5F5F5F;
   --color-on-main-card-secondary-light: #A49999;
+  --color-on-main-card-container-light: #C6C6C6;
 
   --color-surface-light: #565656;
   --color-on-surface-main-light: #FFFFFF;
@@ -14,6 +15,7 @@
     --color-main-card: var(--color-main-card-light);
     --color-on-main-card-primary: var(--color-on-main-card-primary-light);
     --color-on-main-card-secondary: var(--color-on-main-card-secondary-light);
+    --color-on-main-card-container: var(--color-on-main-card-container-light);
 
     --color-surface: var(--color-surface-light);
     --color-on-surface-main: var(--color-on-surface-main-light);
@@ -27,6 +29,7 @@
     --color-main-card: var(--color-main-card-light);
     --color-on-main-card-primary: var(--color-on-main-card-primary-light);
     --color-on-main-card-secondary: var(--color-on-main-card-secondary-light);
+    --color-on-main-card-container: var(--color-on-main-card-container-light);
 
     --color-surface: var(--color-surface-light);
     --color-on-surface-main: var(--color-on-surface-main-light);

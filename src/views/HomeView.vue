@@ -1,12 +1,26 @@
 <script setup>
 import IconButton from '../components/IconButton.vue';
 import config from '../config';
+
+defineProps({
+  tip: {
+    type: String,
+    default: 'Scroll to see more',
+  },
+});
+
+const tipmap = {
+  '': 'Scroll to see more',
+  profile: 'Continue to see profile',
+  project: 'Continue to see projects',
+  contact: 'Continue to see contact',
+};
 </script>
 
 <template>
   <div class="home-wrapper">
     <IconButton label="fas fa-chevron-up" color="var(--color-on-main-card-secondary)"></IconButton>
-    <div class="ui-tips">Scroll to see more</div>
+    <div class="ui-tips">{{ tipmap[tip] }}</div>
     <div class="bio">{{ config.BIO }}</div>
   </div>
 </template>
@@ -33,5 +47,6 @@ import config from '../config';
   font-size: 25px;
   margin-top: 20px;
   text-align: center;
+  width: 80%;
 }
 </style>
