@@ -1,6 +1,10 @@
 <script setup>
 import config from '../config';
 import IconButton from '../components/IconButton.vue';
+
+const openLink = (url) => {
+  window.open(url, '_blank');
+};
 </script>
 
 <template>
@@ -8,7 +12,7 @@ import IconButton from '../components/IconButton.vue';
     <div class="contact-title">Contact</div>
     <div class="contact-items">
       <div class="contact-item" v-for="contact in config.CONTACTS" :key="contact.label">
-        <div class="contact-header">
+        <div class="contact-header" @click="openLink(contact.url)">
           <div class="icon" style="display: flex; justify-content: center">
             <IconButton
               :label="contact.icon"
